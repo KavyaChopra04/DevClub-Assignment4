@@ -14,7 +14,7 @@
                     data: {
                         labels: label,
                         datasets: [{
-                            label: 'NUMBER OF ACTIVE CASES IN INDIA OVER THE LAST 30 DAYS',
+                            label: 'NUMBER OF CONFIRMED CASES IN INDIA OVER THE LAST 30 DAYS',
                             data: data1,
                             borderWidth: 1,
                             borderColor: "blue",
@@ -72,11 +72,11 @@
 				for(var i in obj)
 					res.push(obj[i]);
 				let total=0;
-				let need = res.slice((res.length - 30), res.length)
-				for(var i in need){
+				let need = res.slice((res.length - 31), res.length)
+				for(let i=1;i<31;i++){
 					var date = new Date(need[i].Date);
 					label.push(date.toISOString().substring(0, 10))
-					data1.push(need[i].Active)
+					data1.push(need[i].Confirmed-need[i-1].Confirmed)
 				}
 				console.log(label)
 				console.log(data1)

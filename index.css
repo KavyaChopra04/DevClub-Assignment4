@@ -308,6 +308,13 @@ iframe{
 .graphs{
     align-items: center;
     text-align: center;
+    display:flex;
+    flex-direction: column;
+}
+.thoda
+{
+    display:flex;
+    flex-direction: row;
 }
 .graphs h1
 {
@@ -316,6 +323,18 @@ iframe{
     padding: 10vh;
     margin: auto;
     color: rgb(176, 213, 213);
+}
+.smallcard
+{
+    align-items: center;
+    text-align: center;
+    font-size: 4vh;
+    padding: 10vh;
+    margin: auto;
+}
+.smallcard h2
+{
+    color: rgb(49, 99, 135);
 }
 /*FOOTER*/
 #footer

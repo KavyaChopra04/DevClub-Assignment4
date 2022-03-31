@@ -1,4 +1,8 @@
-var label=[]
+            var todconf;
+            var totconf;
+            var todconfi;
+            var totconfi;
+            var label=[]
 			var data1=[]
 			var data2=[]
 			chartIt();
@@ -48,13 +52,27 @@ var label=[]
                 };
 			async function loadNames() {
 				const response = await fetch('https://api.covid19api.com/total/dayone/country/india');
+                const response2 = await fetch ('https://api.covid19api.com/summary')
 				const obj = await response.json();
+                const obj2= await response2.json();
+                todconf=obj2.Global.NewConfirmed;
+                totconf=obj2.Global.TotalConfirmed;
+                console.log(totconf);
+                console.log(todconf);
+                todconfi=obj2.Countries[77].NewConfirmed;
+                totconfi=obj2.Countries[77].TotalConfirmed;
+                function myFunction() {
+                    document.getElementById("todglob").innerHTML = todconf;
+                    document.getElementById("totglob").innerHTML = totconf;
+                    document.getElementById("todind").innerHTML = todconfi;
+                    document.getElementById("totind").innerHTML = totconfi;
+                  }
+                myFunction();
 				var res = [];
 				for(var i in obj)
 					res.push(obj[i]);
 				let total=0;
 				let need = res.slice((res.length - 30), res.length)
-				console.log(need)
 				for(var i in need){
 					var date = new Date(need[i].Date);
 					label.push(date.toISOString().substring(0, 10))

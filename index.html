@@ -1,12 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Covid Charts</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:wght@300&family=Playfair+Display:wght@400;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dde1b1f96b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@3/dist/chart.min.js"></script>
-	<script src="script.js"></script>
+    <header>
+        <nav class="navbar" class="bgrnd">
+            <ul class="navlist">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#symptoms">Symptoms</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#youtube">Youtube</a></li>
+                <li><a href="#myChart">Data</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <p class="homehead">Have questions about COVID-19?</p>
+        <p class="homehead homehead2">Don't worry, we got answers.</p>
+    </section>
+    <section class="tips" id="tips">
+        <h1>Tips</h1>
+        <div class="tipsub" id="tipsub1">
+            <img src="facemask.png" alt=facemask>
+            <div class="wmas">Wear Mask</div>
+        </div>
+        <div class="tipsub" id="tipsub2">
+            <p class="whan">Wash Hands</p>
+            <img src="washhands.png" alt=washhands>
+        </div>
+    </section>  
+    <section class="symptoms" id="symptoms">
+        <h1>Symptoms</h1>
+        <table class="maintable">
+			
+            <thead>
+                <tr>
+                    <th>Symptom</th>
+                    <th>Severity</th>
+                    <th>Advice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fever</td>
+                    <td>Mild</td>
+                    <td>Drink plenty of fluids, including water</td>
+                </tr>
+                <tr>
+                    <td>Cough</td>
+                    <td>Mild</td>
+                    <td>Drink plenty of fluids, including water</td>
+                </tr>
+                <tr>
+                    <td>Cold</td>
+                    <td>Mild</td>
+                    <td>Drink plenty of fluids, including water</td>
+                </tr>
+                <tr>
+                    <td>Fatigue</td>
+                    <td>Mild</td>
+                    <td>Drink plenty of fluids, including water</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="faq" id="faq">
+        <h1 align="center">Frequently Asked Questions</h1>
+        <div  class="flip-card1">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h3>What is COVID-19?</h3>
+                    
+            </div>
+            <div class="flip-card-back">
+                <p>COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild symptoms, but some people can become severely ill. Although most people with COVID-19 get better within weeks of illness, some people experience post-COVID conditions.</p>
+                <br>
+                <p>Post-COVID conditions are a wide range of new, returning, or ongoing health problems people can experience more than four weeks after first being infected with the virus that causes COVID-19. Older people and those who have certain underlying medical conditions are more likely to get severely ill from COVID-19. Vaccines against COVID-19 are safe and effective.</p> 
+            </div>
+            </div>
+        </div>
+        <br>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>Should I use soap and water or hand sanitizer to protect myself?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Handwashing is one of the best ways to protect yourself and your family from getting sick. Wash your hands often with soap and water for at least 20 seconds, especially after blowing your nose, coughing, or sneezing; going to the bathroom; and before eating or preparing food. If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol.</p>        
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>What are the symptoms of covid 19, and what complications can it cause?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>People with COVID-19 have reported a wide range of symptoms – from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. If you have fever, cough, or other symptoms, you might have COVID-19. For more info, visit WebMD.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="youtube" id="youtube">
+        <h1>YouTube</h1>
+        <iframe src="https://www.youtube.com/embed/21MIvkk7Imc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section class = "graphs"> 
+        <h1>Graphs and Summaries</h1>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3/dist/chart.min.js"></script>
+        <canvas id="myChart" width="60vw" height="20vh"></canvas>
+        <script src="script.js"></script>
+        
+    </section>
+    <div id="footer" class="footer">
+        <p>Kavya Chopra</p>
+        <div class="icons">
+            <a href="https://github.com/KavyaChopra04" target="_blank" class= "socials"><i class="fab fa-github"></i></a>       
+            <a href="https://www.linkedin.com/in/kavya-chopra-619776223?originalSubdomain=in" target="_blank" class= "socials"><i class="fab fa-linkedin"></i></a>   
+            <a href="mailto:cs1210081@iitd.ac.in" target="_blank" class= "socials"><i class="far fa-envelope"></i></a>
+        </div>
+    </div>    
+    
 </body>
 </html>
